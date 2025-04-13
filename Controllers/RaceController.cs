@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using RunGroup.Data;
 using RunGroup.Models;
 
@@ -23,6 +24,12 @@ namespace RunGroup.Controllers
         {
             List<Race> races = _context.Races.ToList();
             return View(races);
+        }
+
+        public IActionResult Detail(int id)
+        {
+            Race race = _context.Races.Include(a => a.Address).FirstOrDefault(c => c.Id == id);
+            return View(race);
         }
     }
 }
