@@ -5,10 +5,6 @@ namespace RunGroup.Models
 {
 	public class Address
 	{
-		//public Address()
-		//{
-		//}
-
 		[Key]
 		public int Id { get; set; }
 

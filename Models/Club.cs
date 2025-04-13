@@ -7,10 +7,6 @@ namespace RunGroup.Models
 {
 	public class Club
 	{
-        //public Club()
-        //{
-        //}
-
         [Key]
         public int Id { get; set; }
         public string? Title { get; set; }

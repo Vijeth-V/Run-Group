@@ -6,11 +6,7 @@ using RunGroup.Data.Enum;
 namespace RunGroup.Models
 {
 	public class Race
-	{
-        //public Races()
-        //{
-        //}
-
+	{ 
         [Key]
         public int Id { get; set; }
         public string Title { get; set; }

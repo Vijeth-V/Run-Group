@@ -5,10 +5,6 @@ namespace RunGroup.Models
 {
 	public class AppUser
 	{
-        //public AppUser()
-        //{
-        //}
-
         [Key]
         public string Id { get; set; }
 
