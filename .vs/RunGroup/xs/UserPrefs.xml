@@ -1,0 +1,30 @@
+﻿<Properties StartupConfiguration="{ABEE042F-C5C3-467A-9C06-94F55975D302}|Default">
+  <MonoDevelop.Ide.ItemProperties.RunGroup PreferredExecutionTarget="/Applications/Brave Browser.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="RunGroup/Views/Shared/_Layout.cshtml">
+    <Files>
+      <File FileName="RunGroup/Views/Shared/_Layout.cshtml" Line="1" Column="16" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="RunGroup" expanded="True">
+            <Node name="RunGroup">
+              <Node name="Views" expanded="True">
+                <Node name="Shared" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+</Properties>
