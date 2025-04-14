@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using RunGroup.Data;
+using RunGroup.Interfaces;
 using RunGroup.Models;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -13,22 +14,22 @@ namespace RunGroup.Controllers
 {
     public class ClubController : Controller
     {
-        private readonly ApplicationDbContext _context;
+        private readonly IClubRepository _clubRepository;
 
-        public ClubController(ApplicationDbContext context)
+        public ClubController(IClubRepository clubRepository)
         {
-            _context = context;
+            _clubRepository = clubRepository;
         }
         // GET: /<controller>/
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            List<Club> clubs = _context.Clubs.ToList();
+            IEnumerable<Club> clubs = await _clubRepository.GetAll();
             return View(clubs);
         }
 
-        public IActionResult Detail(int id)
+        public async Task<IActionResult> Detail(int id)
         {
-            Club club = _context.Clubs.Include(a => a.Address).FirstOrDefault(c => c.Id == id);
+            Club club = await _clubRepository.GetByIdAsync(id);
             return View(club);
         }
     }

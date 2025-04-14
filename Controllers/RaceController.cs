@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using RunGroup.Data;
+using RunGroup.Interfaces;
 using RunGroup.Models;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -13,22 +14,22 @@ namespace RunGroup.Controllers
 {
     public class RaceController : Controller
     {
-        private readonly ApplicationDbContext _context;
+        private readonly IRaceRepository _raceRepository;
 
-        public RaceController(ApplicationDbContext context)
+        public RaceController(IRaceRepository raceRepository)
         {
-            _context = context;
+            _raceRepository = raceRepository;
         }
         // GET: /<controller>/
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            List<Race> races = _context.Races.ToList();
+            IEnumerable<Race> races = await _raceRepository.GetAll();
             return View(races);
         }
 
-        public IActionResult Detail(int id)
+        public async Task<IActionResult> Detail(int id)
         {
-            Race race = _context.Races.Include(a => a.Address).FirstOrDefault(c => c.Id == id);
+            Race race = await _raceRepository.GetByIdAsync(id);
             return View(race);
         }
     }
