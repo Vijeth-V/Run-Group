@@ -13,6 +13,9 @@
     <None Remove="Views\Race\" />
     <None Remove="Repository\" />
     <None Remove="Interfaces\" />
+    <None Remove="Helpers\" />
+    <None Remove="Services\" />
+    <None Remove="ViewModels\" />
   </ItemGroup>
   <ItemGroup>
     <None Update="app.db" CopyToOutputDirectory="PreserveNewest" ExcludeFromSingleFile="true" />
@@ -25,6 +28,7 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.33" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.33" />
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="6.0.2" />
+    <PackageReference Include="CloudinaryDotNet" Version="1.27.5" />
   </ItemGroup>
 
   <ItemGroup>
@@ -33,5 +37,8 @@
     <Folder Include="Views\Race\" />
     <Folder Include="Repository\" />
     <Folder Include="Interfaces\" />
+    <Folder Include="Helpers\" />
+    <Folder Include="Services\" />
+    <Folder Include="ViewModels\" />
   </ItemGroup>
 </Project>

@@ -50,3 +50,5 @@
 /Users/vijeth/Projects/Learn_C#/RunGroup/RunGroup/obj/Debug/net6.0/RunGroup.genruntimeconfig.cache
 /Users/vijeth/Projects/Learn_C#/RunGroup/RunGroup/obj/Debug/net6.0/ref/RunGroup.dll
 /Users/vijeth/Projects/Learn_C#/RunGroup/RunGroup/obj/Debug/net6.0/RunGroup.csproj.CopyComplete
+/Users/vijeth/Projects/Learn_C#/RunGroup/RunGroup/bin/Debug/net6.0/CloudinaryDotNet.dll
+/Users/vijeth/Projects/Learn_C#/RunGroup/RunGroup/bin/Debug/net6.0/Newtonsoft.Json.dll
